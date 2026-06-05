@@ -1,1 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabarish ❤️ Shanmathi</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Playfair+Display:ital@0;1&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{width:100%;height:100%;background:#0a0003;overflow:hidden;}
+.screen{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.bg{position:absolute;inset:0;transition:background 1.5s ease;z-index:0;}
+.particles{position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1;}
+.particle{position:absolute;border-radius:50%;animation:pFloat linear infinite;}
+@keyframes pFloat{0%{transform:translateY(100vh);opacity:0;}10%{opacity:0.8;}90%{opacity:0.4;}100%{transform:translateY(-60px);opacity:0;}}
+.wrap{position:relative;z-index:2;width:100%;max-width:600px;padding:20px 24px;text-align:center;}
+.illu{width:100%;height:180px;margin-bottom:16px;}
+.illu svg{width:100%;height:100%;}
+.illu img{width:100%;height:100%;object-fit:cover;border-radius:14px;box-shadow:0 0 25px rgba(192,0,34,.35);}
+.s-date{font-family:'Playfair Display',serif;font-size:11px;letter-spacing:4px;color:#c0002288;text-transform:uppercase;margin-bottom:8px;opacity:0;transition:none;}
+.s-title{font-family:'Great Vibes',cursive;font-size:clamp(28px,6vw,50px);color:#ff4466;text-shadow:0 0 30px #c0002244;margin-bottom:12px;opacity:0;transition:none;line-height:1.2;}
+.s-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(14px,2.5vw,17px);color:#ffcccc;line-height:1.75;max-width:460px;margin:0 auto;opacity:0;transition:none;}
+.s-sub{font-family:'Playfair Display',serif;font-size:12px;color:#ff8899;letter-spacing:2px;margin-top:12px;opacity:0;transition:none;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+.a1{animation:fadeUp 0.8s ease 0s forwards;}
+.a2{animation:fadeUp 0.8s ease 0.3s forwards;}
+.a3{animation:fadeUp 0.8s ease 0.65s forwards;}
+.a4{animation:fadeUp 0.8s ease 1s forwards;}
+.prog-wrap{position:fixed;bottom:0;left:0;width:100%;height:3px;background:#ffffff11;z-index:10;}
+.prog{height:100%;background:linear-gradient(90deg,#8b0000,#cc0022,#ff4466);width:0%;box-shadow:0 0 8px #cc0022;}
+.controls{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;z-index:20;}
+.ctrl{background:#c0002222;border:1px solid #c0002255;color:#ff8899;font-size:18px;width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(6px);transition:all 0.2s;font-family:sans-serif;}
+.ctrl:hover{background:#c0002255;}
+.dots{display:flex;gap:4px;align-items:center;flex-wrap:wrap;max-width:200px;justify-content:center;}
+.dot{width:5px;height:5px;border-radius:50%;background:#ffffff22;cursor:pointer;transition:all 0.3s;flex-shrink:0;}
+.dot.active{background:#cc0022;box-shadow:0 0 5px #cc0022;width:14px;border-radius:3px;}
+.tap{position:fixed;inset:0;z-index:100;background:#0a0003;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;transition:opacity 1s;}
+.tap-h{font-size:66px;animation:hb 1.5s ease-in-out infinite;filter:drop-shadow(0 0 20px #c00022);}
+@keyframes hb{0%,100%{transform:scale(1);}50%{transform:scale(1.14);};}
+.tap-t{font-family:'Great Vibes',cursive;font-size:clamp(34px,7vw,58px);color:#cc0022;text-shadow:0 0 20px #cc002266;margin-top:14px;animation:gl 2s ease-in-out infinite alternate;}
+@keyframes gl{from{text-shadow:0 0 10px #cc002244;}to{text-shadow:0 0 30px #cc0022cc;}}
+.tap-s{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:#ff8899;margin-top:8px;opacity:0.7;}
+#yw{position:fixed;bottom:-300px;left:-300px;width:1px;height:1px;opacity:0;pointer-events:none;}
+.m-ind{position:fixed;top:16px;left:50%;transform:translateX(-50%);display:none;align-items:center;gap:8px;background:#1a000acc;border:1px solid #c0002444;border-radius:40px;padding:6px 16px;font-family:'Cormorant Garamond',serif;font-size:13px;color:#ff8899;backdrop-filter:blur(6px);z-index:20;font-style:italic;}
+.m-ind.show{display:flex;}
+.mb{display:flex;align-items:flex-end;gap:2px;height:13px;}
+.mbar{width:3px;background:#cc0022;border-radius:2px;animation:mba 0.7s ease infinite;}
+.mbar:nth-child(1){height:5px;animation-delay:0s;}.mbar:nth-child(2){height:11px;animation-delay:0.12s;}.mbar:nth-child(3){height:7px;animation-delay:0.25s;}.mbar:nth-child(4){height:13px;animation-delay:0.08s;}.mbar:nth-child(5){height:6px;animation-delay:0.2s;}
+@keyframes mba{0%,100%{transform:scaleY(0.3);}50%{transform:scaleY(1);}}
+</style>
+</head>
+<body>
+<div id="yw"><div id="yp"></div></div>
+<div class="m-ind" id="mi"><div class="mb"><div class="mbar"></div><div class="mbar"></div><div class="mbar"></div><div class="mbar"></div><div class="mbar"></div></div><span>Onakaga Porantheney ♪</span></div>
+<div class="tap" id="tap" onclick="start()">
+  <div class="tap-h">❤️</div>
+  <div class="tap-t">Sabarish ❤️ Shanmathi</div>
+  <div class="tap-s">tap anywhere to begin our story...</div>
+</div>
+<div class="screen">
+  <div class="bg" id="bg"></div>
+  <div class="particles" id="ptcl"></div>
+  <div class="wrap">
+    <div class="illu" id="illu"></div>
+    <div class="s-date" id="sd"></div>
+    <div class="s-title" id="st"></div>
+    <div class="s-text" id="sx"></div>
+    <div class="s-sub" id="ss"></div>
+  </div>
+</div>
+<div class="prog-wrap"><div class="prog" id="prog"></div></div>
+<div class="controls">
+  <button class="ctrl" onclick="go(cur-1)">&#8249;</button>
+  <div class="dots" id="dots"></div>
+  <button class="ctrl" onclick="go(cur+1)">&#8250;</button>
+</div>
+<script>
+const SC=[
+  {date:"July 19, 2024",title:"A New Beginning",text:"Oru pudhu payanam aarambam... Shanmathi first time college-ku vandhal. The campus felt like a whole new world waiting to be written.",sub:"~ Scene 1 — First Day ~",bg:"radial-gradient(ellipse at 50% 30%,#1a0510 0%,#0a0003 70%)",pc:"pink",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="70" width="240" height="90" rx="4" fill="#1a0008" stroke="#c00022" stroke-width="0.5"/><rect x="80" y="54" width="200" height="26" rx="2" fill="#2a000f" stroke="#c00022" stroke-width="0.5"/><text x="180" y="71" text-anchor="middle" font-family="Great Vibes,cursive" font-size="15" fill="#ff6680">Our College</text><rect x="90" y="90" width="28" height="70" rx="2" fill="#2a0010"/><rect x="135" y="98" width="28" height="62" rx="2" fill="#2a0010"/><rect x="180" y="90" width="28" height="70" rx="2" fill="#2a0010"/><rect x="225" y="103" width="28" height="57" rx="2" fill="#2a0010"/><circle cx="165" cy="140" r="11" fill="#ff4466" opacity="0.85"/><text x="165" y="144" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">S</text><text x="180" y="165" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="11" fill="#ff8899" font-style="italic">First step into a new chapter...</text></svg>`},
+  {date:"July 22, 2024",title:"The Day We Met",text:"Break time. A mutual friend. An introduction. And then... eyes met for the very first time. Something changed forever. ✨",sub:"~ Scene 2 — First Meeting ~",bg:"radial-gradient(ellipse at 40% 50%,#1f0008 0%,#0a0003 65%)",pc:"red",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="90" r="38" fill="#2a0010" stroke="#c00022" stroke-width="0.5"/><text x="110" y="85" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ff8899">Sabarish</text><text x="110" y="100" text-anchor="middle" font-family="Great Vibes,cursive" font-size="12" fill="#ff4466">Senior 🎓</text><circle cx="250" cy="90" r="38" fill="#2a0010" stroke="#c00022" stroke-width="0.5"/><text x="250" y="85" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ff8899">Shanmathi</text><text x="250" y="100" text-anchor="middle" font-family="Great Vibes,cursive" font-size="12" fill="#ff4466">Junior 🌸</text><path d="M148 90 Q180 70 212 90" stroke="#ff4466" stroke-width="1.5" fill="none" stroke-dasharray="4,2"/><circle cx="180" cy="52" r="7" fill="#cc0022" opacity="0.7"><animate attributeName="r" values="7;13;7" dur="1.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.7;0.2;0.7" dur="1.5s" repeatCount="indefinite"/></circle><text x="180" y="56" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#fff">✨</text><text x="180" y="155" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="12" fill="#ffaaaa" font-style="italic">Eyes met... hearts spoke...</text></svg>`},
+  {date:"Friendship Days",title:"Natpu → Kadhal",text:"College corridors. Canteen conversations. Daily chats and stolen smiles. Natpu konjam konjam ah kadhal ah maariyadhu... 💕",sub:"~ Scene 3 — Friendship ~",bg:"radial-gradient(ellipse at 60% 40%,#1a000a 0%,#0a0003 65%)",pc:"pink",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="55" width="140" height="80" rx="8" fill="#1a0008" stroke="#c0002244" stroke-width="0.5"/><text x="90" y="82" text-anchor="middle" font-family="Great Vibes,cursive" font-size="14" fill="#ff6680">Canteen 🍵</text><text x="90" y="100" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff8899">Daily conversations</text><text x="90" y="115" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff8899">Laughs &amp; smiles 😊</text><rect x="200" y="55" width="140" height="80" rx="8" fill="#1a0008" stroke="#c0002244" stroke-width="0.5"/><text x="270" y="82" text-anchor="middle" font-family="Great Vibes,cursive" font-size="14" fill="#ff6680">Chats 💬</text><text x="270" y="100" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff8899">Late night texts</text><text x="270" y="115" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff8899">Good morning 🌅</text><text x="180" y="158" text-anchor="middle" font-family="Great Vibes,cursive" font-size="16" fill="#ff4466">Friendship blossomed into Love 🌹</text></svg>`},
+  {date:"Proposal",title:"Will You Be Mine?",text:"Sabarish, nervous-aga, heart full-aga... propose pannaru. Shanmathi silent... yosikura... and few days later — a quiet, beautiful yes. ❤️",sub:"~ Scene 4 — Rose Petals & Heartbeats ~",bg:"radial-gradient(ellipse at 50% 60%,#2a0008 0%,#0a0003 65%)",pc:"rose",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="85" r="38" fill="#200008" stroke="#c00022" stroke-width="0.5"/><text x="120" y="80" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ff8899">Sabarish</text><text x="120" y="97" text-anchor="middle" font-family="Great Vibes,cursive" font-size="13" fill="#ff4466">nervous... 💍</text><circle cx="240" cy="85" r="38" fill="#200008" stroke="#c00022" stroke-width="0.5"/><text x="240" y="80" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ff8899">Shanmathi</text><text x="240" y="97" text-anchor="middle" font-family="Great Vibes,cursive" font-size="13" fill="#ff4466">thinking... 🌸</text><text x="180" y="42" text-anchor="middle" font-family="Great Vibes,cursive" font-size="22" fill="#cc0022">Yes ❤️</text><path d="M175 50 L175 60" stroke="#cc0022" stroke-width="1" stroke-dasharray="3,2" fill="none"/><text x="60" y="145" font-size="13" fill="#cc002266">🌹</text><text x="155" y="155" font-size="11" fill="#cc002255">🌹</text><text x="250" y="148" font-size="13" fill="#cc002266">🌹</text><text x="300" y="142" font-size="10" fill="#cc002244">🌹</text></svg>`},
+  {date:"Family Problem",title:"The Storm",text:"Anna kandupiditthar. Emotional moments. Temporary separation. But true love was never meant to break that easily...",sub:"~ Scene 5 — Even storms pass ~",bg:"radial-gradient(ellipse at 50% 30%,#0f0005 0%,#050002 70%)",pc:"dark",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><path d="M0 70 Q50 50 100 70 Q150 90 200 65 Q250 45 300 70 Q330 82 360 60" stroke="#c0002233" stroke-width="35" fill="none" opacity="0.3"/><text x="180" y="65" text-anchor="middle" font-family="sans-serif" font-size="22" fill="#c0002266">⛈️</text><line x1="110" y1="30" x2="110" y2="135" stroke="#c0002255" stroke-width="0.8" stroke-dasharray="4,3"/><circle cx="80" cy="118" r="24" fill="#1a0008" stroke="#c0002244" stroke-width="0.5"/><text x="80" y="114" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff8899">Sabarish</text><text x="80" y="128" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#ff4466">💔</text><circle cx="268" cy="118" r="24" fill="#1a0008" stroke="#c0002244" stroke-width="0.5"/><text x="268" y="114" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff8899">Shanmathi</text><text x="268" y="128" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#ff4466">😢</text><text x="180" y="162" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="11" fill="#ff888888" font-style="italic">Temporary... only temporary...</text></svg>`},
+  {date:"Love Continues",title:"Secret Love",text:"Secret chats. College memories. Cute fights and sweet patchups. Love finds a way — it always does. 😘💕",sub:"~ Scene 6 — Love finds a way ~",bg:"radial-gradient(ellipse at 40% 60%,#1f0008 0%,#0a0003 65%)",pc:"pink",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="45" width="110" height="65" rx="10" fill="#1a0008" stroke="#c0002244" stroke-width="0.5"/><text x="85" y="72" text-anchor="middle" font-family="Great Vibes,cursive" font-size="13" fill="#ff6680">Secret Chat 💬</text><text x="85" y="90" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff4466">Miss you 🥺</text><rect x="220" y="70" width="110" height="65" rx="10" fill="#1a0008" stroke="#c0002244" stroke-width="0.5"/><text x="275" y="97" text-anchor="middle" font-family="Great Vibes,cursive" font-size="13" fill="#ff6680">Reply 💕</text><text x="275" y="115" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff4466">Miss you more 🌹</text><path d="M140 78 Q180 60 220 85" stroke="#ff4466" stroke-width="1.5" fill="none" stroke-dasharray="5,3"/><text x="180" y="66" text-anchor="middle" font-family="sans-serif" font-size="14">❤️</text><text x="180" y="155" text-anchor="middle" font-family="Great Vibes,cursive" font-size="15" fill="#ff6680">Fights... Patchups... Love always 💗</text></svg>`},
+  {date:"Sabarish Birthday 2025",title:"Happy Birthday Sabarish",text:"College birthday celebration. Cake cutting. Friends cheering. And Shanmathi's smile — the best gift of all. 🎂🥳",sub:"~ Scene 7 — Celebrating You ~",bg:"radial-gradient(ellipse at 50% 40%,#2a0010 0%,#0a0003 65%)",pc:"gold",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><rect x="145" y="100" width="70" height="55" rx="4" fill="#2a0010" stroke="#c00022" stroke-width="0.5"/><rect x="157" y="90" width="46" height="18" rx="3" fill="#3a0015"/><line x1="174" y1="72" x2="174" y2="90" stroke="#ffaa00" stroke-width="1.5"/><circle cx="174" cy="70" r="4" fill="#ffcc00"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="0.8s" repeatCount="indefinite"/></circle><line x1="186" y1="72" x2="186" y2="90" stroke="#ffaa00" stroke-width="1.5"/><circle cx="186" cy="70" r="4" fill="#ffcc00"><animate attributeName="opacity" values="0.9;0.3;0.9" dur="1s" repeatCount="indefinite"/></circle><text x="180" y="135" text-anchor="middle" font-family="Great Vibes,cursive" font-size="13" fill="#ff6680">Happy Birthday!</text><text x="70" y="118" font-size="16" fill="#ff446666">🎉</text><text x="272" y="118" font-size="16" fill="#ff446666">🎊</text><text x="180" y="165" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="11" fill="#ff8899" font-style="italic">Friends, love &amp; beautiful memories 🥳</text></svg>`},
+  {date:"A Difficult Time",title:"The Rain 🌧️",text:"A message notification. A misunderstanding. The hardest moment. Rain fell... and so did tears. But real love fights back. 💪",sub:"~ Scene 8 — But this isn't the end ~",bg:"radial-gradient(ellipse at 50% 20%,#050010 0%,#030006 70%)",pc:"blue",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="0" x2="40" y2="170" stroke="#3344aa1e" stroke-width="1"/><line x1="110" y1="0" x2="90" y2="170" stroke="#3344aa1e" stroke-width="1"/><line x1="160" y1="0" x2="140" y2="170" stroke="#3344aa1e" stroke-width="1"/><line x1="210" y1="0" x2="190" y2="170" stroke="#3344aa1e" stroke-width="1"/><line x1="260" y1="0" x2="240" y2="170" stroke="#3344aa1e" stroke-width="1"/><line x1="310" y1="0" x2="290" y2="170" stroke="#3344aa1e" stroke-width="1"/><text x="180" y="72" text-anchor="middle" font-family="sans-serif" font-size="28" fill="#c0002244">🌧️</text><text x="180" y="108" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="13" fill="#8899ff77" font-style="italic">Misunderstanding...</text><text x="180" y="138" text-anchor="middle" font-family="Great Vibes,cursive" font-size="18" fill="#c0002244">💔</text><text x="180" y="162" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="10" fill="#ff888855" font-style="italic">But this is not the end...</text></svg>`},
+  {date:"Reunion",title:"Back Together ❤️",text:"Sabarish understood. Shanmathi forgave. Hands held again. Unmaiyana kadhal pirivaiyum thaandi serkkum... stronger than ever.",sub:"~ Scene 9 — True love always returns ~",bg:"radial-gradient(ellipse at 50% 50%,#2a0008 0%,#0a0003 65%)",pc:"rose",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="85" r="38" fill="#1a0008" stroke="#c00022" stroke-width="0.5"/><text x="120" y="80" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ff8899">Sabarish</text><text x="120" y="97" text-anchor="middle" font-family="Great Vibes,cursive" font-size="12" fill="#ff4466">I understand 🥺</text><circle cx="240" cy="85" r="38" fill="#1a0008" stroke="#c00022" stroke-width="0.5"/><text x="240" y="80" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ff8899">Shanmathi</text><text x="240" y="97" text-anchor="middle" font-family="Great Vibes,cursive" font-size="12" fill="#ff4466">Together 💕</text><text x="180" y="90" text-anchor="middle" font-family="sans-serif" font-size="18">🤝</text><text x="180" y="152" text-anchor="middle" font-family="Great Vibes,cursive" font-size="18" fill="#ff6680">Reunited ❤️</text><text x="180" y="167" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="10" fill="#ff8899" font-style="italic">Stronger than before</text></svg>`},
+  {date:"Shanmathi Birthday — Coimbatore",title:"Brookefields Mall 🎂",text:"Coimbatore trip. Brookefields Mall. Shopping, laughter, birthday cake. All planned just for her. The happiest moments. ✨",sub:"~ Scene 10 — Happy Birthday Shanmathi ~",bg:"radial-gradient(ellipse at 50% 40%,#2a000a 0%,#0a0003 65%)",pc:"gold",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><rect x="90" y="50" width="180" height="95" rx="6" fill="#1a0008" stroke="#c00022" stroke-width="0.5"/><text x="180" y="78" text-anchor="middle" font-family="Great Vibes,cursive" font-size="16" fill="#ff6680">Brookefields Mall</text><text x="180" y="100" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ff8899">🛍️ Shopping spree</text><text x="180" y="116" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ff8899">🎂 Birthday cake</text><text x="180" y="132" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ff8899">😍 Happy moments</text><text x="48" y="108" font-size="18" fill="#ff446644">🎉</text><text x="286" y="108" font-size="18" fill="#ff446644">🎊</text><text x="180" y="162" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="11" fill="#ff8899" font-style="italic">Her smile = my whole world 🌍</text></svg>`},
+  {date:"Pongal Story",title:"Instagram Oops 😅",text:"A Pongal story upload. Family discovers. Sabarish handling it all bravely. Love isn't always easy — but it's always worth it. 💪",sub:"~ Scene 11 — Brave love ~",bg:"radial-gradient(ellipse at 50% 30%,#150005 0%,#0a0003 70%)",pc:"dark",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><rect x="125" y="30" width="110" height="110" rx="14" fill="#1a0008" stroke="#c00022" stroke-width="0.5"/><circle cx="180" cy="72" r="22" fill="#2a0010"/><text x="180" y="68" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#ff8899">📸 Story</text><text x="180" y="84" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff4466">uploaded!</text><text x="180" y="116" text-anchor="middle" font-family="Great Vibes,cursive" font-size="13" fill="#ff4466">Pongal 🪔</text><text x="180" y="158" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="12" fill="#ff8899" font-style="italic">Sabarish handled it all... 🥺</text></svg>`},
+  {date:"Final Year Feeling",title:"Ini Daily Paaka Mudiyadha... 🥺",text:"College gate. Shanmathi looks back one last time. Ini daily paaka mudiyadha naalgal... A feeling no words can capture.",sub:"~ Scene 12 — Bittersweet goodbye ~",bg:"radial-gradient(ellipse at 50% 80%,#0f0005 0%,#050002 65%)",pc:"dark",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><rect x="140" y="55" width="80" height="100" rx="4" fill="#0f0005" stroke="#c0002233" stroke-width="1"/><rect x="155" y="55" width="50" height="8" rx="2" fill="#1a0008"/><text x="180" y="68" text-anchor="middle" font-family="sans-serif" font-size="7" fill="#c0002266">COLLEGE GATE</text><circle cx="105" cy="138" r="20" fill="#1a0008" stroke="#c0002244" stroke-width="0.5"/><text x="105" y="134" text-anchor="middle" font-family="sans-serif" font-size="8" fill="#ff8899">Shanmathi</text><text x="105" y="148" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#ff446688">🥺</text><path d="M124 138 L140 138" stroke="#c0002233" stroke-width="0.8" stroke-dasharray="3,2" fill="none"/><text x="180" y="168" text-anchor="middle" font-family="Great Vibes,cursive" font-size="13" fill="#c0002266">ini daily paaka mudiyadha... 🥺</text></svg>`},
+  {date:"Work &amp; College Life",title:"Miles Apart, Hearts Close",text:"Sabarish in office. Shanmathi in college. Different places, same heart. Long-distance feeling... but love bridges every gap. ❤️",sub:"~ Scene 13 — Distance means nothing ~",bg:"radial-gradient(ellipse at 30% 50%,#150008 0%,#0a0003 65%)",pc:"pink",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="60" width="130" height="80" rx="6" fill="#1a0008" stroke="#c0002244" stroke-width="0.5"/><text x="85" y="90" text-anchor="middle" font-family="Great Vibes,cursive" font-size="14" fill="#ff6680">Office 💼</text><text x="85" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff8899">Sabarish working</text><text x="85" y="122" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff4466">missing her 🥺</text><rect x="210" y="60" width="130" height="80" rx="6" fill="#1a0008" stroke="#c0002244" stroke-width="0.5"/><text x="275" y="90" text-anchor="middle" font-family="Great Vibes,cursive" font-size="14" fill="#ff6680">College 📚</text><text x="275" y="108" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff8899">Shanmathi in class</text><text x="275" y="122" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#ff4466">missing him 💕</text><path d="M150 100 Q180 82 210 100" stroke="#ff4466" stroke-width="1.5" stroke-dasharray="5,3" fill="none"/><text x="180" y="90" text-anchor="middle" font-family="sans-serif" font-size="16">❤️</text><text x="180" y="162" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="11" fill="#ff8899" font-style="italic">Same moon, same heart...</text></svg>`},
+  {date:"Kodaikanal Birthday Trip",title:"Hills, Mist &amp; You 🏔️",text:"Bus travel. Misty hills. Friends cheering. Birthday decorations in the clouds. The most magical trip ever planned. 🎉",sub:"~ Scene 14 — Kodaikanal ❤️ ~",bg:"radial-gradient(ellipse at 50% 30%,#1f000a 0%,#0a0003 65%)",pc:"rose",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><path d="M0 140 Q80 70 150 110 Q220 145 280 80 Q320 52 360 90 L360 170 L0 170 Z" fill="#1a0008" opacity="0.8"/><path d="M0 110 Q60 55 120 90 Q180 125 240 65 Q300 35 360 72" stroke="#c0002233" stroke-width="0.5" fill="none"/><text x="180" y="52" text-anchor="middle" font-family="Great Vibes,cursive" font-size="20" fill="#ff6680">Kodaikanal 🏔️</text><text x="180" y="90" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="12" fill="#ffaaaa" font-style="italic">Mist... hills... laughter...</text><text x="180" y="125" text-anchor="middle" font-family="Great Vibes,cursive" font-size="16" fill="#cc0022">Birthday in the clouds 🎂</text><text x="68" y="152" font-size="14" fill="#ff446644">🎉</text><text x="272" y="152" font-size="14" fill="#ff446644">🎊</text></svg>`},
+  {date:"Forever",title:"July 22, 2024 la Aarambam...",text:"Sila sandaigal... Sila kanneer... Aana niraya kadhal... This is your story. This is your forever. 🧡✨",sub:"Sabarish ❤️ Shanmathi — Forever and Always",bg:"radial-gradient(ellipse at 50% 50%,#3a000f 0%,#0a0003 60%)",pc:"rose",
+  svg:`<svg viewBox="0 0 360 170" xmlns="http://www.w3.org/2000/svg"><text x="180" y="48" text-anchor="middle" font-family="Great Vibes,cursive" font-size="26" fill="#cc0022">Sabarish ❤️ Shanmathi</text><text x="180" y="78" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="13" fill="#ffaaaa" font-style="italic">July 22, 2024 → Forever...</text><path d="M80 110 Q180 75 280 110" stroke="#cc0022" stroke-width="0.8" stroke-dasharray="4,2" fill="none"/><text x="180" y="115" text-anchor="middle" font-family="sans-serif" font-size="30" fill="#cc0022">❤️</text><text x="180" y="148" text-anchor="middle" font-family="Great Vibes,cursive" font-size="20" fill="#ff6680">Forever and Always ✨</text><text x="180" y="166" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="11" fill="#ff888899" font-style="italic">This is just the beginning...</text></svg>`},
+];
 
+let cur=0,tmr=null;
+const DUR=8000;
+
+const dotsEl=document.getElementById('dots');
+SC.forEach((_,i)=>{
+  const d=document.createElement('div');
+  d.className='dot'+(i===0?' active':'');
+  d.onclick=()=>go(i);
+  dotsEl.appendChild(d);
+});
+
+const COLORS={pink:['#ff4466','#ff8899','#ffaabb'],red:['#cc0022','#ff2244','#ff6677'],rose:['#cc0033','#ff3355','#ff99aa'],gold:['#cc8800','#ffaa00','#ffcc44'],dark:['#330011','#440022'],blue:['#2233aa','#3344cc']};
+
+function spawnPtcl(type){
+  const pl=document.getElementById('ptcl');pl.innerHTML='';
+  const c=COLORS[type]||COLORS.pink;
+  for(let i=0;i<18;i++){
+    const p=document.createElement('div');
+    p.className='particle';
+    p.style.cssText=`left:${Math.random()*100}%;width:${3+Math.random()*5}px;height:${3+Math.random()*5}px;background:${c[Math.floor(Math.random()*c.length)]};opacity:0.6;animation-duration:${5+Math.random()*7}s;animation-delay:${Math.random()*5}s;`;
+    pl.appendChild(p);
+  }
+}
+
+function go(idx){
+  cur=((idx%SC.length)+SC.length)%SC.length;
+  const s=SC[cur];
+  document.getElementById('bg').style.background=s.bg;
+  document.getElementById('illu').innerHTML=s.svg;
+  ['sd','st','sx','ss'].forEach(id=>{
+    const el=document.getElementById(id);
+    el.className=el.className.split(' ')[0];
+    void el.offsetWidth;
+  });
+  document.getElementById('sd').textContent=s.date;
+  document.getElementById('st').textContent=s.title;
+  document.getElementById('sx').textContent=s.text;
+  document.getElementById('ss').textContent=s.sub;
+  document.getElementById('sd').classList.add('a1');
+  document.getElementById('st').classList.add('a2');
+  document.getElementById('sx').classList.add('a3');
+  document.getElementById('ss').classList.add('a4');
+  spawnPtcl(s.pc);
+  document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===cur));
+  const bar=document.getElementById('prog');
+  bar.style.transition='none';bar.style.width='0%';
+  clearTimeout(tmr);
+  setTimeout(()=>{bar.style.transition=`width ${DUR}ms linear`;bar.style.width='100%';},60);
+  tmr=setTimeout(()=>go(cur+1),DUR);
+}
+
+function start(){
+  const ov=document.getElementById('tap');
+  ov.style.opacity='0';ov.style.pointerEvents='none';
+  setTimeout(()=>ov.style.display='none',1000);
+  go(0);
+  if(!document.getElementById('ys')){
+    const t=document.createElement('script');t.id='ys';t.src='https://www.youtube.com/iframe_api';document.head.appendChild(t);
+  }
+}
+window.onYouTubeIframeAPIReady=function(){
+  new YT.Player('yp',{height:'1',width:'1',videoId:'Spm8T8-aSz4',
+  playerVars:{autoplay:1,loop:1,playlist:'Spm8T8-aSz4',controls:0,fs:0,rel:0,modestbranding:1,playsinline:1},
+  events:{onReady:function(e){e.target.setVolume(80);e.target.playVideo();document.getElementById('mi').classList.add('show');}}});
+};
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1);});
+</script>
+</body>
+</html>
