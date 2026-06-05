@@ -14,9 +14,31 @@ html,body{width:100%;height:100%;background:#0a0003;overflow:hidden;}
 .particle{position:absolute;border-radius:50%;animation:pFloat linear infinite;}
 @keyframes pFloat{0%{transform:translateY(100vh);opacity:0;}10%{opacity:0.8;}90%{opacity:0.4;}100%{transform:translateY(-60px);opacity:0;}}
 .wrap{position:relative;z-index:2;width:100%;max-width:600px;padding:20px 24px;text-align:center;}
-.illu{width:100%;height:180px;margin-bottom:16px;}
-.illu svg{width:100%;height:100%;}
-.illu img{width:100%;height:100%;object-fit:cover;border-radius:14px;box-shadow:0 0 25px rgba(192,0,34,.35);}
+.illu{
+width:100vw;
+height:100vh;
+margin:0;
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+.illu svg,
+.illu img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.wrap{
+position:relative;
+z-index:2;
+width:100%;
+max-width:900px;
+padding:20px;
+text-align:center;
+}
 .s-date{font-family:'Playfair Display',serif;font-size:11px;letter-spacing:4px;color:#c0002288;text-transform:uppercase;margin-bottom:8px;opacity:0;transition:none;}
 .s-title{font-family:'Great Vibes',cursive;font-size:clamp(28px,6vw,50px);color:#ff4466;text-shadow:0 0 30px #c0002244;margin-bottom:12px;opacity:0;transition:none;line-height:1.2;}
 .s-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(14px,2.5vw,17px);color:#ffcccc;line-height:1.75;max-width:460px;margin:0 auto;opacity:0;transition:none;}
