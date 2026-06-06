@@ -230,6 +230,7 @@ function start(){
   const ov=document.getElementById('tap');
   ov.style.opacity='0';ov.style.pointerEvents='none';
   setTimeout(()=>ov.style.display='none',1000);
+  document.getElementById('mi').classList.add('show');
   go(0);
   if(!document.getElementById('ys')){
     const t=document.createElement('script');t.id='ys';t.src='https://www.youtube.com/iframe_api';document.head.appendChild(t);
