@@ -240,6 +240,13 @@ function start(){
   setTimeout(()=>ov.style.display='none',1000);
   document.getElementById('mi').classList.add('show');
   go(0);
+  setTimeout(()=>{
+  if(window.player){
+    player.playVideo();
+    player.unMute();
+    player.setVolume(80);
+  }
+},1000);
   if(!document.getElementById('ys')){
     const t=document.createElement('script');t.id='ys';t.src='https://www.youtube.com/iframe_api';document.head.appendChild(t);
   }
