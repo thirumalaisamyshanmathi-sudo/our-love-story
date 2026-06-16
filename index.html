@@ -245,13 +245,6 @@ function start(){
   audio.play().catch(err => {
   console.log("Audio blocked:", err);
   });
-  setTimeout(()=>{
-  if(window.player){
-    player.playVideo();
-    player.unMute();
-    player.setVolume(80);
-  }
-},1000);
   if(!document.getElementById('ys')){
     const t=document.createElement('script');t.id='ys';t.src='https://www.youtube.com/iframe_api';document.head.appendChild(t);
   }
