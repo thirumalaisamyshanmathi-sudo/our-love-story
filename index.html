@@ -240,7 +240,11 @@ function start(){
   setTimeout(()=>ov.style.display='none',1000);
   document.getElementById('mi').classList.add('show');
   go(0);
-  document.getElementById('bgm').play();
+  const audio = document.getElementById('bgm');
+  audio.volume = 0.8;
+  audio.play().catch(err => {
+  console.log("Audio blocked:", err);
+  });
   setTimeout(()=>{
   if(window.player){
     player.playVideo();
