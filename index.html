@@ -245,34 +245,6 @@ function start(){
   audio.play().catch(err => {
   console.log("Audio blocked:", err);
   });
-  if(!document.getElementById('ys')){
-    const t=document.createElement('script');t.id='ys';t.src='https://www.youtube.com/iframe_api';document.head.appendChild(t);
-  }
-}
-window.onYouTubeIframeAPIReady=function(){
-  player = new YT.Player('yp',{
-    height:'1',
-    width:'1',
-    videoId:'xW4Qcwlftuo',
-    playerVars:{
-      autoplay:1,
-      loop:1,
-      playlist:'xW4Qcwlftuo',
-      controls:0,
-      fs:0,
-      rel:0,
-      modestbranding:1,
-      playsinline:1
-    },
-    events:{
-      onReady:function(e){
-        e.target.setVolume(80);
-        e.target.playVideo();
-        document.getElementById('mi').classList.add('show');
-      }
-    }
-  });
-};
 document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')go(cur+1);if(e.key==='ArrowLeft')go(cur-1);});
 </script>
 <audio id="bgm" loop preload="auto">
